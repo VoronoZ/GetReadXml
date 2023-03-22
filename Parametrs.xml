@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<main>
+	<parametrs name ="group1">
+		<number name="Высота" value ="2000" label="Высота"></number>
+		<number name="Ширина" value ="1000" label="Ширина"></number>
+	</parametrs>
+	
+	<parametrs name ="group2">
+		<number value ="2000" label="Высота"></number>
+		
+		<combobox name="Тип" value ="Тип" label="Тип" >
+			<item value="1" label="Тип1"></item>
+			<item value="2" label="Тип2"></item>
+		</combobox>
+
+		<if if="Тип == 1">
+			<number name="Тип 3" value ="90" label="Тип3"></number>
+		</if>		
+	</parametrs>
+	
+</main>
