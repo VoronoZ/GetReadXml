@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace GetReadXml.Classes
+namespace GetReadXml.Class
 {
     internal class MyClass
     {
@@ -27,14 +27,14 @@ namespace GetReadXml.Classes
                     int Y_GroupBox = 10;
                     int Y_All = 20;
 
-                 
+              
 
                     // обход всех узлов в корневом элементе
                     foreach (XmlElement xnode in xRoot.SelectNodes("parametrs"))
                     {
                         GroupBox groupBox = new GroupBox();
                         groupBox.Height = 90;
-                     
+                        groupBox.Width = 260;
                        
                         ComboBox comboBox = new ComboBox();
 
@@ -45,6 +45,7 @@ namespace GetReadXml.Classes
                         foreach (XmlElement node in xnode)
                         {
                             string TypeControl = node.Name;
+                            Label label= new Label();  
 
                             switch (TypeControl)
                             {
@@ -52,13 +53,18 @@ namespace GetReadXml.Classes
 
                                 case "number":
                                     NumericUpDown numeric = new NumericUpDown();
+                                    label.Text = node.GetAttribute("label");
+                                    label.Parent= groupBox;
+                                    label.Location = new Point(10, Y_All);
+                                    label.AutoSize= true;
+                                    
 
                                     numeric.Maximum = 5000;
                                     numeric.Minimum = 100;
                                     numeric.Value = decimal.Parse(node.GetAttribute("value"));
                                     numeric.Parent = groupBox;
-                                    numeric.Location = new Point(10, Y_All);
-
+                                    numeric.Location = new Point(groupBox.Width - numeric.Width - 10, Y_All);
+                                
                                     Y_All += 25;
                                     break;
 
@@ -67,7 +73,7 @@ namespace GetReadXml.Classes
                                 #region Выпадающий список
 
                                 case "combobox":
-                                    comboBox.Location = new Point(10, Y_All);
+                                    comboBox.Location = new Point(groupBox.Width - comboBox.Width - 10, Y_All);
                                     comboBox.Parent = groupBox;
 
                                     // Заполнение Combobox
