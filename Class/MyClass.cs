@@ -73,6 +73,11 @@ namespace GetReadXml.Class
                                 #region Выпадающий список
 
                                 case "combobox":
+                                    label.Text = node.GetAttribute("label");
+                                    label.Parent = groupBox;
+                                    label.Location = new Point(10, Y_All);
+                                    label.AutoSize = true;
+
                                     comboBox.Location = new Point(groupBox.Width - comboBox.Width - 10, Y_All);
                                     comboBox.Parent = groupBox;
 
