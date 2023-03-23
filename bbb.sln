@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetXmlRead", "GetXmlRead.csproj", "{A66A35B7-DB4F-4962-9503-71F9161BDF54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A66A35B7-DB4F-4962-9503-71F9161BDF54}.Debug|x86.ActiveCfg = Debug|x86
+		{A66A35B7-DB4F-4962-9503-71F9161BDF54}.Debug|x86.Build.0 = Debug|x86
+		{A66A35B7-DB4F-4962-9503-71F9161BDF54}.Release|x86.ActiveCfg = Release|x86
+		{A66A35B7-DB4F-4962-9503-71F9161BDF54}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A77959C-DA4A-43EE-94CF-7C0E25EF2F53}
+	EndGlobalSection
+EndGlobal
