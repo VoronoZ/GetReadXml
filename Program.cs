@@ -16,7 +16,7 @@ namespace GetReadXml
         {
            Form form = new Form1();
            form.ShowDialog();
-            Console.WriteLine();
+          
         }
     }
 }
